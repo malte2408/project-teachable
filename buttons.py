@@ -31,7 +31,7 @@ class Picture(object):
 
 
 ui = UI()
-camera = PiCamera
+camera = PiCamera()
 
 while True:
     print(ui.getButtonState())
