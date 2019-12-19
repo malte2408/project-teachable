@@ -1,3 +1,5 @@
+from picamera import PiCamera
+
 class UI(object):
     def __init__(self):
         global rpigpio
@@ -22,9 +24,18 @@ class UI(object):
     def getButtonState(self):
         return [rpigpio.input(button) for button in self._buttons]
 
-ui = UI()
 
-while True: # Run forever
+class Picture(object):
+    def __init__(self, frame):
+        pass
+
+
+ui = UI()
+camera = PiCamera
+
+while True:
     print(ui.getButtonState())
     for index, button in enumerate(ui.getButtonState()):
         ui.setLED(index, button)
+        if button > 0:
+            camera.capture(str(index) + '.jpg')
