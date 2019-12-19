@@ -26,5 +26,6 @@ class UI(object):
 ui = UI()
 
 while True: # Run forever
+    print(ui.getButtonState())
     for index, button in enumerate(ui.getButtonState()):
         ui.setLED(index, button)
