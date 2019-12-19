@@ -21,7 +21,6 @@ class UI(object):
 
     def getButtonState(self):
         return [rpigpio.input(button) for button in self._buttons]
-s
 
 ui = UI()
 
