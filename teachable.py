@@ -104,7 +104,7 @@ class UI_Keyboard(UI):
     import keyinput
 
     # Layout of GPIOs for Raspberry demo
-    self._buttons = ['q', '1' , '2' , '3', '4']
+    self._buttons = ['q', '1', '2', '3', '4']
     self._LEDs = [None]*5
     super(UI_Keyboard, self).__init__()
 
@@ -115,7 +115,7 @@ class UI_Keyboard(UI):
     pressed_chars = set()
     while True:
       char = keyinput.get_char()
-      if not char : break
+      if not char: break
       pressed_chars.add(char)
 
     state = [b in pressed_chars for b in self._buttons]
@@ -130,7 +130,7 @@ class UI_Raspberry(UI):
     rpigpio.setmode(rpigpio.BCM)
 
     # Layout of GPIOs for Raspberry demo
-    self._buttons = [16 , 6 , 5 , 24, 27]
+    self._buttons = [16, 6, 5, 24, 27]
     self._LEDs = [20, 13, 12, 25, 22]
 
     # Initialize them all
