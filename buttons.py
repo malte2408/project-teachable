@@ -11,8 +11,8 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(gpio, GPIO.OUT)
 
 
-GPIO.output(gpio, GPIO.HIGH)
+GPIO.output(gpio, GPIO.LOW)
 
 time.sleep(2)
 
-GPIO.output(gpio, GPIO.LOW)
+GPIO.output(gpio, GPIO.HIGH)
