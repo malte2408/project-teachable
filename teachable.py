@@ -130,8 +130,8 @@ class UI_Raspberry(UI):
     rpigpio.setmode(rpigpio.BCM)
 
     # Layout of GPIOs for Raspberry demo
-    self._buttons = [16, 6, 5, 24, 27]
-    self._LEDs = [20, 13, 12, 25, 22]
+    self._buttons = [7, 6, 21, 23, 9, 28, 2, 16]  # [16, 6, 5, 24, 27]
+    self._LEDs = [0, 5, 26, 22, 8, 27, 3, 15]  # [20, 13, 12, 25, 22]
 
     # Initialize them all
     for pin in self._buttons:
