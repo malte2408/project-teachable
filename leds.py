@@ -8,11 +8,11 @@ GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(gpio, GPIO.OUT)
 
-GPIO.output(gpio, GPIO.LOW)
-
 time.sleep(2)
 
 for i in range(0, 30):
+    GPIO.setup(i, GPIO.OUT)
+
     GPIO.output(i, GPIO.LOW)
 
     print(i)
