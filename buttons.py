@@ -8,7 +8,7 @@ gpio = int(sys.argv[1])
 
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(gpio, GPIO.IN)
+GPIO.setup(gpio, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 start = time.time()
 
