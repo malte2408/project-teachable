@@ -6,7 +6,7 @@ gpio = int(sys.argv[1])
 
 
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
 GPIO.setup(gpio, GPIO.OUT)
 
