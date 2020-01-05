@@ -13,10 +13,10 @@ GPIO.output(gpio, GPIO.LOW)
 time.sleep(2)
 
 for i in range(0, 30):
-    GPIO.output(gpio, GPIO.LOW)
+    GPIO.output(i, GPIO.LOW)
 
     print(i)
 
     time.sleep(3)
 
-    GPIO.output(gpio, GPIO.HIGH)
+    GPIO.output(i, GPIO.HIGH)
