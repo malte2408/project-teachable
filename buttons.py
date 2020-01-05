@@ -6,13 +6,17 @@ gpio = int(sys.argv[1])
 
 
 
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(gpio, GPIO.OUT)
 
 
 GPIO.output(gpio, GPIO.LOW)
 
-time.sleep(2)
+start = time.time()
 
 GPIO.output(gpio, GPIO.HIGH)
+
+while time.time() - start < 20: # Run forever
+    if GPIO.input(gpio) == GPIO.HIGH:
+        print("Button was pushed!")
