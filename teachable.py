@@ -131,7 +131,7 @@ class UI_Raspberry(UI):
 
     # Layout of GPIOs for Raspberry demo
     self._buttons = [18, 4, 25, 27, 26, 14, 20, 1, 13]  # [16, 6, 5, 24, 27]
-    self._LEDs = [0, 15, 16, 22, 11, 21, 24, 17, 6]  # [20, 13, 12, 25, 22]
+    self._LEDs = [0, 21, 16, 22, 11, 15, 24, 17, 6]  # [20, 13, 12, 25, 22]
 
     # Initialize them all
     for pin in self._buttons:
