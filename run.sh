@@ -14,4 +14,4 @@
 # limitations under the License.
 
 
-python3 teachable.py 
+python3 teachable.py --method 'imprinting'   --model 'models/mobilenet_v1_1.0_224_l2norm_quant_edgetpu.tflite'
