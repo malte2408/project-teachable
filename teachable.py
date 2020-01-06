@@ -203,7 +203,7 @@ class TeachableMachine(object):
     fps = len(self._frame_times)/float(self._frame_times[-1] - self._frame_times[0] + 0.001)
     # Print/Display results
     self._ui.setOnlyLED(classification)
-    classes = ['--', 'One', 'Two', 'Three', 'Four']
+    classes = ['--', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight']
     status = 'fps %.1f; #examples: %d; Class % 7s'%(
             fps, self._engine.exampleCount(),
             classes[classification or 0])
